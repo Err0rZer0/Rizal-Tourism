@@ -1,0 +1,1019 @@
+/* =========================================
+   RIZAL PROVINCE TOURISM - MAIN STYLES
+   Theme: Nature (Greens) & Arts (Earthy/Clay)
+========================================= */
+
+/* GENERAL SETTINGS */
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    /* Upgraded the font stack for a cleaner, modern look */
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f6f5; /* Slightly warmer off-white */
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: #1b4332; /* Deep Sierra Madre Green */
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    
+}
+
+.header-content {
+    max-width: 1200px; 
+    margin: 0 auto;    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;   
+}
+
+.logo-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px;
+}
+
+.logo-area img { 
+    width: 45px; /* Slightly larger logo */
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text .brand { 
+    font-weight: 700; 
+    font-size: 22px; 
+    letter-spacing: 0.5px;
+}
+
+.logo-text .dept {
+    font-size: 11px;
+    color: #a3b18a; /* Soft sage green for contrast */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* TOP NAV */
+.top-nav { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 25px; /* Rounder, more modern buttons */
+    transition: all 0.3s ease;
+}
+
+.top-nav a:hover, .top-nav a.active {
+    background-color: #bc6c25; /* Earthy Terracotta accent */
+    color: white;
+}
+
+
+
+/* DROPDOWN STYLING */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    text-decoration: none;
+    color: white;
+    padding: 5px 12px;
+    font-size: 14px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    z-index: 1001;
+    top: 130%; 
+    border-radius: 8px; /* Softer edges */
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #444;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: 0.2s ease;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f9fa;
+    color: #1b4332; 
+    border-left: 4px solid #bc6c25; /* Terracotta hover accent */
+    padding-left: 24px; /* Creates a smooth indentation effect on hover */
+}
+
+/* Show the menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Cleanup for Top Nav links */
+.top-nav {
+    display: flex;
+    align-items: center;
+}
+
+.top-nav a {
+    text-decoration: none;
+}
+
+
+
+/* MAIN LAYOUT */
+.main-container {
+    display: flex;
+    align-items: flex-start; /* Ensure it doesn't stretch items to full height */
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main-content {
+    flex: 1; /* Takes up all remaining space */
+    padding: 40px;
+    background-color: #fff;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background: white;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    
+    /* CHANGE THIS: Set height to 100vh to fill the screen */
+    height: 100vh; 
+    
+    position: sticky;
+    /* KEEP THIS: This tells the sidebar where to "stick" as you scroll */
+    top: 0; 
+    
+    padding: 20px 0;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    border-bottom: 2px solid #8b0000; /* Deep red underline */
+    padding-bottom: 10px;
+    margin: 0 20px 15px 20px;
+    text-align: center; 
+}
+
+/* Scroll Container Setup */
+.sidebar-scroll-container {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding: 0 15px;
+    scrollbar-width: thin; 
+}
+
+/* Custom Scrollbar Styling (Optional - for a cleaner look) */
+.sidebar-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar-scroll-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+.sidebar-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #8b0000; /* colour green */
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    min-height: min-content; 
+}
+
+.sidebar-list a {
+    display: block;
+    padding: 10px;
+    color: #444;
+    text-decoration: none;
+    font-size: 14px; /* Slightly larger for readability */
+    text-align: left; 
+    transition: 0.2s;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+.sidebar-list a.active, .sidebar-list a:hover {
+    color: white;
+    background: #006400; /* Deep Green background */
+}
+
+
+
+/* CONTENT & HERO */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    /* Updated gradient to a sleek, dark green-to-black fade for better text readability */
+    background-image: linear-gradient(rgba(27, 67, 50, 0.8), rgba(8, 28, 21, 0.7)), 
+                      url('../Images/Index/rizal_main.jpg'); /* Make sure to add a nice Rizal background image */
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 40px;          
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 64px; /* Bigger, bolder impact */
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: #e9ecef;
+}
+
+
+/* --- UPDATED BUTTONS FOR RIZAL THEME --- */
+
+.btn-fill, .btn-outline {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 28px; /* Slightly more breathing room */
+    border-radius: 30px; /* Pill-shaped buttons are more modern */
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Primary Button: Terracotta/Clay */
+.btn-fill { 
+    background-color: #bc6c25; 
+    color: #ffffff; 
+    border: none; 
+    box-shadow: 0 4px 14px rgba(188, 108, 37, 0.3); /* Subtle glow */
+}
+
+.btn-fill:hover {
+    background-color: #dda15e; /* Lighter earth tone */
+    transform: translateY(-2px); /* Lifts up slightly */
+    box-shadow: 0 6px 20px rgba(188, 108, 37, 0.5);
+}
+
+/* Outline Button: Sage/Forest Green */
+.btn-outline { 
+    background: transparent;
+    color: #ffffff; 
+    border: 2px solid #ffffff; 
+    margin-left: 10px; 
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #dda15e; /* Changes to earth tone on hover */
+    color: #dda15e;
+    transform: translateY(-2px);
+}
+
+/* Active State (When clicked) */
+.btn-fill:active, .btn-outline:active {
+    transform: translateY(0);
+}
+
+
+
+/* ABOUT US STYLES */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h3 {
+    color: #00441b;
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #444;
+    margin-left: 15px;
+}
+
+
+/* --- UNIFIED PREMIUM ZOOM EFFECT --- */
+/* Transitions uncommented and active */
+.category-card, .food-card {
+    position: relative;
+    overflow: hidden; 
+    border-radius: 12px;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.category-card img, .food-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.category-card:hover img, 
+.food-card:hover img {
+    transform: scale(1.12); /* Perfect zoom level */
+}
+
+.category-card:hover, 
+.food-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.food-card {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+/* Category Intro */
+.category-intro {
+    text-align: center; 
+    padding: 60px 20px 20px;
+}
+
+.category-intro h2 {
+    font-size: 38px; 
+    color: #1b4332;
+    margin-bottom: 15px;
+}
+
+.category-intro p {
+    font-size: 18px;
+    max-width: 600px; 
+    margin: 0 auto; 
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+/* --- 4-COLUMN GRID FIX --- */
+.category-section {
+    padding: 20px 5%; /* Fluid padding */
+}
+
+.grid-container {
+    display: grid;
+    /* This auto-fit magic automatically changes the number of columns based on screen width! */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 25px;
+    padding: 20px 0 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden; 
+    height: 240px; /* Slightly taller cards */
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.category-card {
+    text-decoration: none;
+    display: block;
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+}
+
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.category-link {
+    text-decoration: none;
+    display: block;
+}
+
+.category-card .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(139, 0, 0, 0.8)); /* Deep red gradient */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* Hover Effects */
+.category-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 35px rgba(27, 67, 50, 0.2); /* Green-tinted shadow */
+}
+
+.category-card:hover img {
+    transform: scale(1.10); /* Smooth zoom */
+}
+
+.category-card .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 15px 15px; /* Extra top padding for smoother gradient fade */
+    background: linear-gradient(transparent, rgba(8, 28, 21, 0.9)); /* Very dark green gradient */
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+
+/* STATISTICS BAR */
+.stats-bar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    padding: 60px 5%;
+    background-color: #1b4332; /* Deep green background */
+    color: white;
+    text-align: center;
+    margin-top: auto; 
+}
+
+.stat-item {
+    margin: 15px;
+}
+
+.stat-item h2 {
+    color: #dda15e; /* Earthy accent for the numbers */
+    font-size: 54px;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+}
+
+.stat-item p {
+    color: #e9ecef;
+    font-size: 15px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+
+
+/* MAIN FOOTER */
+.main-footer {
+    background-color: #081c15; /* Almost black-green */
+    color: #e9ecef;
+    padding: 70px 5% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    /* Responsive footer grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col h3 { 
+    font-size: 26px; 
+    margin: 0; 
+    color: white;
+}
+
+.footer-col .dept { 
+    font-size: 13px; 
+    color: #dda15e; /* Terracotta accent */
+    margin-bottom: 20px; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col .desc { 
+    font-size: 15px; 
+    line-height: 1.7; 
+    opacity: 0.8; 
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+.footer-col ul { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.footer-col ul li { 
+    margin-bottom: 10px; 
+}
+
+.footer-col ul li a { 
+    color: #e9ecef; 
+    text-decoration: none; 
+    font-size: 15px; 
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover { 
+    color: #dda15e; /* Hover color changes to earthy accent */
+    padding-left: 5px; /* Slight nudge on hover */
+}
+
+.footer-col p { 
+    font-size: 15px; 
+    margin: 12px 0; 
+    opacity: 0.9; 
+}
+
+
+    /* SOCIAL BUTTONS */
+    .social-icons { 
+        display: flex; 
+        gap: 12px; 
+    }
+
+    .social-btn {
+        width: 40px;
+        height: 40px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; /* Circle buttons */
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .social-btn:hover { 
+        background: #bc6c25; /* Terracotta background on hover */
+        border-color: #bc6c25;
+        transform: translateY(-3px); 
+    }
+
+
+/* COPYRIGHT BAR */
+.footer-bottom {
+    display: flex;
+    justify-content: center; /* Centered copyright */
+    align-items: center;
+    padding-top: 20px;
+    font-size: 13px;
+    opacity: 0.6;
+    text-align: center;
+}
+
+/*.legal-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+*/
+
+
+
+
+
+
+/* -------------------------------------------- GASTRONOMY HTML ------------------------------------- */
+/* --- GASTRONOMY SPECIFIC STYLES --- */
+
+/* Banner at the top */
+.category-banner {
+    /* Base gradient (dark green to almost black) */
+    background-image: linear-gradient(rgba(27, 67, 50, 0.75), rgba(8, 28, 21, 0.85));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: white; 
+    border-bottom: 5px solid #1b4332; 
+    position: relative;
+    padding: 80px 10%; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-banner h1 {
+    font-size: 50px; 
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', 'Segoe UI', serif; 
+    text-align: center; /* Centered */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+    margin-top: 0;
+}
+
+
+.category-banner p {
+    font-size: 19px;
+    line-height: 1.6;
+    text-align: center; 
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
+}
+
+
+/* --- 2. THE "SMALLER" CENTERED LOOK (Matches your second picture) --- */
+.content-wrap {
+    max-width: 1100px; /* Limits width to create side spaces */
+    margin: 20px auto; /* Centers the block and adds top/bottom spacing */
+    background: white; /* Makes the grid area pop against the gray body */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+
+/* Forced 3-Column Grid */
+.gastronomy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important; /* Forces 3 columns */
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Food Card Styling */
+.food-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /*transition: transform 0.3s ease;    */
+}
+
+/*.food-card:hover {
+    transform: translateY(-5px);
+}*/
+
+.food-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /*transition: transform 0.4s ease;*/
+}
+
+
+.card-text {
+    padding: 20px;
+}
+
+.card-text h3 {
+    margin: 0 0 1px 0;
+    color: #1b4332;
+}
+
+/* This targets the h2 specifically inside my food/history cards */
+.card-text h2 {
+    font-size: 18px; /* Changed from 5px to something readable */
+    margin-top: 2px;
+    margin-bottom: 5px;
+    color: #555; /* A slightly softer gray than the main title */
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-align: left;
+}
+
+.card-text p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+
+
+/* -------------------------------- GEOGRAPHY ----------------------------------- */
+
+/* --- The Bento Grid System --- */
+.bento-grid {
+    display: grid;
+    /* Creates 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* Sets a base height for the smallest tiles */
+    grid-auto-rows: 250px; 
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Base Tile Styling */
+.bento-item {
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end; /* Pushes text to the bottom */
+    padding: 25px;
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+}
+
+.bento-item:hover {
+    /*transform: translateY(-5px);*/
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Tile Sizing Modifiers */
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.bento-tall {
+    grid-row: span 2;
+}
+
+.bento-wide {
+    grid-column: span 2;
+}
+
+/* Makes an item fill the entire width of the 3-column grid */
+.bento-full {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+/* Text Content Inside Tiles */
+.bento-content {
+    color: #ffffff;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4); /* Adds a slight dark box behind text for readability */
+    padding: 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(2px); /* Optional: adds a modern frosted glass effect */
+}
+
+.bento-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.bento-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bento-tall {
+        grid-row: span 1; /* Make tall tiles standard height on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ensure the main container doesn't "swallow" the footer */
+    .page-layout {
+        display: flex;
+        min-height: calc(100vh - 100px); /* Adjust based on my header height */
+        align-items: stretch;
+    }
+    .bento-grid {
+        grid-template-columns: 1fr; /* Single column on phones */
+        grid-auto-rows: 300px;
+    }
+    .bento-large, .bento-wide, .bento-tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+
+
+/* ---------------- PLAN YOUR TRIP ------------- */
+/* Checklist Styling */
+.entry-checklist {
+    background: #f4f6f5;
+    padding: 30px;
+    border-left: 5px solid #bc6c25; /* Changed to Terracotta/Clay accent */
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+.entry-checklist ul {
+    list-style-type: "✓ ";
+    padding-left: 20px;
+}
+
+.entry-checklist li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Visa Cards Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+
+
+/* TRANSPORT */
+/* Create a specific grid for the transport page */
+.transport-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr; /* Exactly 2 columns */
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1100px;             /* Keeps the 2x2 grid from getting too wide */
+}
+
+/* Fix images in the 2x2 grid so they are uniform */
+.transport-grid .food-card img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+
+
+/* FAQ Styling */
+.faq-section {
+    width: 100%; /* Ensures it takes up the available space */
+    max-width: 1500px; /* Slightly wider for better balance */
+    margin: 40px 0; /* Align to the left to match the banner */
+}
+
+.faq-item {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.faq-item h3 {
+    color: #1b4332; /* Deep Green */
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-section, .entry-checklist {
+    width: 90%;            /* Responsive width */
+    max-width: 1000px;     /* Limits the 'stretch' so it's easier to read */
+    margin: 10px auto;     /* 'auto' on the sides centers the block */
+    padding: 0 20px;       /* Adds a little breathing room on the edges */
+}
+
+
+/* FAQ Item spacing */
+.faq-item {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+
+.info-grid, 
+.faq-section, 
+.entry-checklist {
+    width: 95%;
+    max-width: 1100px; /* Limits width so it doesn't look 'stretched' */
+    margin: 40px auto; /* Centered with 'auto' */
+}
+
+
+/* ==========================================================================
+   SIMPLE ITINERARIES STYLES
+   ========================================================================== */
+.itinerary-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.itinerary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.itinerary-header h2 {
+    color: #00441b;
+    margin: 0;
+}
+
+.tag {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.itinerary-list {
+    list-style: none;
+    padding: 0;
+}
+
+.itinerary-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+}
